@@ -1,0 +1,85 @@
+/* universal style */
+* {
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/*style for card*/
+.title{
+    text-align:center;
+    font-weight:bold;
+}
+
+.task{
+    margin-top: 20px;
+}
+
+.card-image-top,.card-body,.card-footer{
+    padding:20px;
+}
+
+.single_btn{
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card{
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.card-top{
+    padding: 20px;
+}
+
+.card-body{
+    padding: 5px;
+}
+
+.card-footer{
+    width: 90%;
+    padding: 15px;
+    margin:15px;
+    border: 0;
+    color: #fff;
+}
+
+.single_card{
+    max-width: 100%; 
+    margin:0 auto;
+    text-align: center;
+}
+
+.box{
+    background-color: #fff;
+    /* width: 0 auto; */
+    border: 10px solid rgb(134, 102, 102);
+    padding: 25px;
+    margin:15px;
+    color:rgb(201, 196, 191);
+}
+
+#output{
+    padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .left, .main, .right {
+      width: 100%; /* The width is 100%, when the viewport is 600px or smaller */
+    }
+    .card {
+        display:inline;
+        display: block;
+    }
+    #output{
+        display: none;
+    }
+}

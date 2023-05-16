@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MID EXAM</title>
+    <link rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+    <!-- main section start here-->
+    <main>
+        <!-- code for Making card starts here -->
+        <section  class="task container"> 
+            <h2 class="title"><em>Interective Geometry Genius</em></h2>
+            <div style="display: flex;" class="card single_btn" style="margin: 20px;">
+                <div class="single_btn single_card">
+                    <!-- triangle -->
+                    <div class="card-top">
+                        <img
+                            style="width: 60%"
+                            src="shapes/triangle.png"
+                            alt="This image is about a triangle"
+                        />
+                        <!-- alt is nothing but a simple identifier or attribute which gives extra info about the tag -->
+                    </div>
+                    <div class="card-body">
+                        <h3>Triangle/h3>
+                        <p style="color:grey ;"><b>Area(A) = 0.5 x B x H</b></p>
+                    </div>
+                    <div style="display: flex;gap: 20px; margin: 20px;">
+                        <div style="display: flex;">
+                            <p>b(cm)</p>
+                            <input style="width:100%;" type="text" id="value_of_b_triangle" value="0">
+                        </div>
+                        <div style="display: flex;">
+                            <p>h(cm)</p>
+                            <input  style="width:100%;" type="text" id="value_of_h_triangle" value="0">
+                        </div>
+                    </div>
+                  
+                    <button class="card-footer" style="background-color:rgba(247, 241, 70, 0.867);" onclick="area_of_triangle()">CALCULATE</button>
+                </div>
+
+                <div class="single_btn single_card">
+                    <!-- rectangle -->
+                    <div class="card-top">
+                        <img
+                            style="width: 80%"
+                            src="shapes/afc204cc-fc62-44bd-8b63-be36e984d194.jpg"
+                            alt="This image is about a rectangle"
+                        />
+                    </div>
+                    <div class="card-body" style="padding: 75px;">
+                        <h3>Rectangle</h3>
+                        <p style="color:grey ;"><b>Area(A) = B x L</b></p>
+                    </div>
+                    <div style="display: flex;gap: 20px; margin: 20px;">
+                        <div style="display: flex;">
+                            <p>b(cm)</p>
+                            <input style="width:100%;" type="text" id="value_of_b_rectangle" value="0">
+                        </div>
+                        <div style="display: flex;">
+                            <p>l(cm)</p>
+                            <input style="width:100%;" type="text" id="value_of_l_rectangle" value="0">
+                        </div>
+                    </div>
+                    <p id="Show_result2" style="font-weight: bold;"></p>
+                    <button class="card-footer" style="background-color:rgba(120, 112, 233, 0.88);" onclick="area_of_rectangle()">CALCULATE</button>
+                </div>
+                
+                <div class="single_btn single_card">
+                    <!-- elippse -->
+                    <div class="card-top">
+                        <img
+                            style="width: 80%"
+                            src="shapes/ellipse.png"
+                            alt="This image is about a rectangle"
+                        />
+                    </div>
+                    <div class="card-body" style="padding: 75px;">
+                        <h3>Ellipse</h3>
+                        <p style="color:grey ;"><b>Area(A) =3.14xaxb</b></p>
+                    </div>
+                    <div style="display: flex;gap: 20px; margin: 20px;">
+                        <div style="display: flex;">
+                            <p>a(cm)</p>
+                            <input style="width:100%;" type="text" id="value_of_b_ellipse" value="0">
+                        </div>
+                        <div style="display: flex;">
+                            <p>b(cm)</p>
+                            <input style="width:100%;" type="text" id="value_of_l_ellipse" value="0">
+                        </div>
+                    </div style="width=100%">
+                    <p id="Show_result3" style="font-weight: bold;"></p>
+                    <button class="card-footer" style="background-color:#5a5a5a56;" onclick="area_of_ellipse()">CALCULATE</button>
+                </div>
+                
+
+
+
+
+
+
+                <div class="single_btn single_card">
+                    <!-- result -->
+                    <!-- <div class="card-top">
+                        <p style="color:rgb(255, 9, 9) ;"><b>All Answer</b></p>
+                    </div>
+                    <div class="card-body" style="padding: 75px;">
+                        <p id="Show_result1" style="font-weight: bold;"></p>
+                        
+                       
+                    </div> -->
+                    <div id="showResult">
+                        <h3 style="text-align: center;margin: 30px;">Result</h3>
+                        <p style="background-color: #fff;padding: 100px;"></p>
+                        <div class="single_btn single_card">
+                            <ul id="Show_result"></ul>
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+                <p id="Show_result" style="font-weight: bold;"></p>
+
+               
+            </div>
+        </section>
+        <!-- code for Making card ends here -->
+    </main>
+
+    <!-- js code starts here -->
+    <script>
+        //for triangle
+        let b_of_triangle,h_of_triangle;
+        function area_of_triangle()
+        {
+            b_of_triangle = document.getElementById("value_of_b_triangle").value;
+            h_of_triangle = document.getElementById("value_of_h_triangle").value;
+            document.getElementById("Show_result").innerHTML += "Area of triangle is " + 0.5*b_of_triangle*h_of_triangle+"<br>";
+        }
+        //for rectangle
+        let b_of_rectangle,l_of_rectangle;
+        function area_of_rectangle()
+        {
+            b_of_rectangle = document.getElementById("value_of_b_rectangle").value;
+            l_of_rectangle = document.getElementById("value_of_l_rectangle").value;
+            document.getElementById("Show_result").innerHTML += "Area of rectangle is " + b_of_rectangle*l_of_rectangle+"<br>";
+        }
+
+
+        let b_of_ellipse,l_of_ellipse;
+        function area_of_ellipse()
+        {
+            b_of_ellipse = document.getElementById("value_of_b_ellipse").value;
+            l_of_ellipse = document.getElementById("value_of_l_ellipse").value;
+            document.getElementById("Show_result").innerHTML += "Area of ellipse is " + b_of_ellipse*l_of_ellipse*3.14+"<br>";
+        }
+
+
+        function randomColor() {
+  let color = [];
+  for (let i = 0; i < 3; i++) {
+    color.push(Math.floor(Math.random() * 256));
+  }
+  return 'rgb(' + color.join(', ') + ')';
+} 
+
+document.addEventListener("mouseover", function(){
+  document.body.style.backgroundColor = randomColor();
+});
+
+document.querySelector('circle').addEventListener('mouseover', event => {
+      event.target.style.fill = randomColor();
+});
+    </script>
+    <!-- js code ends here -->
+</body>
+</html>
